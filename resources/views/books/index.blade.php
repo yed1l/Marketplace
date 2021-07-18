@@ -18,7 +18,7 @@
             <ul class="nav">
                 <li class="nav-item ml-3">
                     <a href="{{ URL::current() }}"
-                    class="nav-text {{Request::has('sort') ? 'text-dark' : 'text-primary'}}">Сначала старые </a>
+                    class="nav-text {{Request::get('sort') === 'new_to_old' ? 'text-dark' : 'text-primary'}}">Сначала свежие</a>
                 </li>
 
                 <li class="nav-item mx-2"><i class="fas fa-circle align-middle"></i></li>
@@ -26,7 +26,7 @@
 
                 <li class="nav-item">
                     <a href="{{ URL::current()."?sort=old_to_new" }}"
-                       class="nav-text {{Request::get('sort') === 'old_to_new' ? 'text-primary' : 'text-dark'}}">Сначала свежие</a>
+                       class="nav-text {{Request::get('sort') === 'old_to_new' ? 'text-primary' : 'text-dark'}}">Сначала старые</a>
                 </li>
                 <li class="nav-item mx-2"><i class="fas fa-circle align-middle"></i></li>
 

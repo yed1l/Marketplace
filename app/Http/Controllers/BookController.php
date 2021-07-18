@@ -21,6 +21,7 @@ class BookController extends Controller
             $order = $request->get('sort');
 
 
+
             if ($order === "price_asc") {
                 $books = Book::orderBy('price')->paginate(5);
             }
@@ -29,8 +30,11 @@ class BookController extends Controller
                 $books = Book::orderBy('price', 'desc')->paginate(5);
             }
 
+            else if ($order === "new_to_old") {
+                $books = Book::OrderBy('created_at')->paginate(5);
+            }
             else if ($order === "old_to_new") {
-                $books = Book::paginate(5);
+                $books = Book::OrderBy('created_at')->paginate(5);
             }
 
             return view('books.index', compact('books'));
