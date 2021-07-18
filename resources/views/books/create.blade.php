@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
             <label for="book-desc">Описание:</label>
-            <textarea class="form-control" rows="2" name="book_description" placeholder="Описание книги" id="book-desc"></textarea>
+            <textarea class="form-control" rows="2" name="book_description" placeholder="Описание" id="book-desc"></textarea>
         </div>
 
         <div class="form-group">
